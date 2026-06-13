@@ -17,21 +17,24 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="py-20 lg:py-28 bg-background">
+    <section id="testimonials" className="py-28 lg:py-32 bg-gradient-to-b from-background via-muted/50 to-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 items-start">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground text-balance">
+            <p className="text-sm font-semibold tracking-widest text-primary uppercase">Testimonials</p>
+            <h2 className="mt-4 text-4xl sm:text-5xl font-serif font-bold text-foreground text-balance leading-tight">
               What Our Clients Say
             </h2>
-            <p className="mt-4 text-muted-foreground">
+            <p className="mt-6 text-lg text-muted-foreground font-light leading-relaxed">
               Join over 500+ happy homeowners who trust Crystal Clear Pools for their outdoor sanctuary.
             </p>
-            <div className="mt-6 flex items-center gap-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-primary text-primary" />
-              ))}
-              <span className="ml-2 text-sm font-medium text-foreground">5.0 / 5.0</span>
+            <div className="mt-8 flex items-center gap-2">
+              <div className="flex gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                ))}
+              </div>
+              <span className="text-base font-semibold text-foreground">5.0 / 5.0</span>
             </div>
           </div>
 
@@ -39,18 +42,23 @@ export function Testimonials() {
             {testimonials.map((testimonial) => (
               <blockquote 
                 key={testimonial.author} 
-                className="bg-card p-6 rounded-xl border border-border"
+                className="group bg-card p-8 rounded-2xl shadow-premium hover:shadow-premium-lg transition-all duration-500 border border-border/50 hover:border-primary/20 hover:-translate-y-1"
               >
-                <p className="text-muted-foreground italic leading-relaxed">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                  ))}
+                </div>
+                <p className="text-foreground leading-relaxed text-lg font-light italic">
                   &ldquo;{testimonial.quote}&rdquo;
                 </p>
-                <footer className="mt-6 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <footer className="mt-6 flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/30 to-primary/10 flex items-center justify-center shrink-0 shadow-sm">
                     <span className="text-sm font-semibold text-primary">{testimonial.initials}</span>
                   </div>
                   <div>
-                    <cite className="not-italic font-semibold text-foreground">{testimonial.author}</cite>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                    <cite className="not-italic font-serif font-semibold text-foreground block">{testimonial.author}</cite>
+                    <p className="text-sm text-muted-foreground font-light">{testimonial.role}</p>
                   </div>
                 </footer>
               </blockquote>

@@ -15,16 +15,16 @@ export function Hero() {
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/35 to-black/60" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight text-balance">
-          Experience Pure Luxury
-          <span className="block text-white/90">In Your Backyard</span>
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold text-white leading-[1.1] text-balance">
+          Experience Pure<br />
+          <span className="text-white/95">Luxury</span>
         </h1>
-        <p className="mt-6 text-lg sm:text-xl text-white/80 max-w-2xl mx-auto text-pretty">
+        <p className="mt-8 text-xl sm:text-2xl text-white/85 max-w-2xl mx-auto text-pretty font-light leading-relaxed">
           Bespoke infinity pools and premium maintenance for the discerning homeowner who values crystal clear perfection.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">

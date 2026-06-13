@@ -76,6 +76,7 @@
 
 @theme inline {
   --font-sans: var(--font-public-sans), 'Public Sans', system-ui, sans-serif;
+  --font-serif: var(--font-playfair-display), 'Playfair Display', serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -121,5 +122,31 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  
+  /* Premium shadow utilities */
+  .shadow-premium {
+    @apply shadow-[0_10px_30px_rgba(0,0,0,0.1)];
+  }
+  
+  .shadow-premium-lg {
+    @apply shadow-[0_20px_40px_rgba(0,0,0,0.15)];
+  }
+  
+  .shadow-premium-hover {
+    @apply shadow-[0_25px_50px_rgba(0,0,0,0.2)];
+  }
+  
+  /* Gradient utilities */
+  .gradient-primary {
+    @apply bg-gradient-to-br from-primary/10 to-transparent;
+  }
+  
+  .gradient-overlay {
+    @apply bg-gradient-to-b from-transparent via-transparent to-background;
+  }
+  
+  .gradient-border-primary {
+    @apply bg-gradient-to-r from-primary via-primary to-primary/60;
   }
 }

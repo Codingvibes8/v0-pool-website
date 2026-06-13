@@ -15,32 +15,33 @@ import {
 
 export function Contact() {
   return (
-    <section id="contact" className="py-20 lg:py-28 bg-foreground text-background">
+    <section id="contact" className="py-28 lg:py-32 bg-gradient-to-b from-foreground to-foreground/95 text-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-balance">
+            <p className="text-sm font-semibold tracking-widest text-primary uppercase">Get Started</p>
+            <h2 className="mt-4 text-4xl sm:text-5xl font-serif font-bold text-balance leading-tight">
               Ready for your dream pool?
             </h2>
-            <p className="mt-4 text-background/70">
+            <p className="mt-6 text-lg text-background/75 font-light leading-relaxed">
               Schedule your free consultation today. Our expert designers will visit your property to discuss your vision and provide a detailed estimate.
             </p>
 
-            <div className="mt-8 space-y-4">
-              <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-primary" />
+            <div className="mt-12 space-y-6">
+              <div className="flex items-start gap-4 p-5 rounded-xl bg-background/10 hover:bg-background/15 transition-colors duration-300">
+                <Phone className="w-6 h-6 text-primary shrink-0 mt-1" />
                 <div>
-                  <p className="text-sm text-background/60">Call Us Directly</p>
-                  <a href="tel:8005557665" className="font-semibold hover:text-primary transition-colors">
+                  <p className="text-sm text-background/60 font-medium">Call Us Directly</p>
+                  <a href="tel:8005557665" className="font-serif font-semibold text-lg hover:text-primary transition-colors">
                     (800) 555-POOL
                   </a>
                 </div>
               </div>
-              <div className="flex items-center gap-3">
-                <MapPin className="w-5 h-5 text-primary" />
+              <div className="flex items-start gap-4 p-5 rounded-xl bg-background/10 hover:bg-background/15 transition-colors duration-300">
+                <MapPin className="w-6 h-6 text-primary shrink-0 mt-1" />
                 <div>
-                  <p className="text-sm text-background/60">Visit Our Showroom</p>
-                  <address className="font-semibold not-italic">
+                  <p className="text-sm text-background/60 font-medium">Visit Our Showroom</p>
+                  <address className="font-serif font-semibold text-lg not-italic">
                     123 Aqua Blvd, Los Angeles, CA
                   </address>
                 </div>
@@ -48,27 +49,27 @@ export function Contact() {
             </div>
           </div>
 
-          <div className="bg-card text-foreground rounded-2xl p-6 sm:p-8">
-            <h3 className="text-xl font-semibold mb-6">Get a Free Consultation</h3>
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="fullName">Full Name</Label>
-                  <Input id="fullName" placeholder="John Doe" />
+          <div className="bg-card text-foreground rounded-2xl p-8 sm:p-10 shadow-premium-lg border border-border/30">
+            <h3 className="text-2xl font-serif font-semibold mb-8">Get a Free Consultation</h3>
+            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="space-y-3">
+                  <Label htmlFor="fullName" className="font-semibold">Full Name</Label>
+                  <Input id="fullName" placeholder="John Doe" className="rounded-lg shadow-sm h-10" />
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="phone">Phone Number</Label>
-                  <Input id="phone" type="tel" placeholder="(555) 000-0000" />
+                <div className="space-y-3">
+                  <Label htmlFor="phone" className="font-semibold">Phone Number</Label>
+                  <Input id="phone" type="tel" placeholder="(555) 000-0000" className="rounded-lg shadow-sm h-10" />
                 </div>
               </div>
-              <div className="space-y-2">
-                <Label htmlFor="email">Email Address</Label>
-                <Input id="email" type="email" placeholder="john@example.com" />
+              <div className="space-y-3">
+                <Label htmlFor="email" className="font-semibold">Email Address</Label>
+                <Input id="email" type="email" placeholder="john@example.com" className="rounded-lg shadow-sm h-10" />
               </div>
-              <div className="space-y-2">
-                <Label htmlFor="service">Service Interested In</Label>
+              <div className="space-y-3">
+                <Label htmlFor="service" className="font-semibold">Service Interested In</Label>
                 <Select>
-                  <SelectTrigger id="service">
+                  <SelectTrigger id="service" className="rounded-lg shadow-sm h-10">
                     <SelectValue placeholder="Select a service" />
                   </SelectTrigger>
                   <SelectContent>
@@ -79,11 +80,11 @@ export function Contact() {
                   </SelectContent>
                 </Select>
               </div>
-              <div className="space-y-2">
-                <Label htmlFor="message">Message (Optional)</Label>
-                <Textarea id="message" placeholder="Tell us about your project..." rows={3} />
+              <div className="space-y-3">
+                <Label htmlFor="message" className="font-semibold">Message (Optional)</Label>
+                <Textarea id="message" placeholder="Tell us about your project..." rows={3} className="rounded-lg shadow-sm" />
               </div>
-              <Button type="submit" size="lg" className="w-full">
+              <Button type="submit" size="lg" className="w-full font-semibold shadow-lg hover:shadow-xl mt-4">
                 Send Message
               </Button>
             </form>

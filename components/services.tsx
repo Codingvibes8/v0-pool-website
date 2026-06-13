@@ -25,51 +25,51 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-20 lg:py-28 bg-background">
+    <section id="services" className="py-28 lg:py-32 bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div>
-            <p className="text-sm font-semibold tracking-wider text-primary uppercase">Our Expertise</p>
-            <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-foreground text-balance">
+            <p className="text-sm font-semibold tracking-widest text-primary uppercase">Our Expertise</p>
+            <h2 className="mt-4 text-4xl sm:text-5xl font-serif font-bold text-foreground text-balance leading-tight">
               Transforming Your<br />Outdoor Living
             </h2>
-            <p className="mt-4 text-muted-foreground max-w-xl">
+            <p className="mt-6 text-lg text-muted-foreground max-w-xl font-light leading-relaxed">
               From initial conceptual design to meticulous weekly upkeep, we provide end-to-end pool excellence tailored to your lifestyle.
             </p>
           </div>
           <Link 
             href="#services" 
-            className="flex items-center gap-2 text-primary font-medium hover:underline underline-offset-4"
+            className="flex items-center gap-2 text-primary font-medium hover:underline underline-offset-4 transition-colors"
           >
             View all services
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
-            <article key={service.title} className="group bg-card rounded-xl overflow-hidden border border-border hover:shadow-lg transition-shadow">
-              <div className="relative h-48 overflow-hidden">
+            <article key={service.title} className="group bg-card rounded-2xl overflow-hidden shadow-premium hover:shadow-premium-lg transition-all duration-500 border border-border/50 hover:border-primary/30 hover:-translate-y-1">
+              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-primary/5 to-transparent">
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover group-hover:scale-110 transition-transform duration-700"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
-              <div className="p-6">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <service.icon className="w-5 h-5 text-primary" />
+              <div className="p-8">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mb-6">
+                  <service.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground">{service.title}</h3>
-                <p className="mt-2 text-muted-foreground text-sm">{service.description}</p>
+                <h3 className="text-2xl font-serif font-semibold text-foreground">{service.title}</h3>
+                <p className="mt-3 text-muted-foreground text-base font-light leading-relaxed">{service.description}</p>
                 <Link 
                   href="#contact" 
-                  className="mt-4 inline-flex items-center gap-1 text-primary text-sm font-medium hover:underline underline-offset-4"
+                  className="mt-6 inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all duration-300"
                 >
                   Learn More
-                  <ArrowRight className="w-3 h-3" />
+                  <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             </article>

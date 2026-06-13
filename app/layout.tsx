@@ -1,11 +1,17 @@
 import type { Metadata, Viewport } from 'next'
-import { Public_Sans } from 'next/font/google'
+import { Public_Sans, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 const publicSans = Public_Sans({ 
   subsets: ["latin"],
   variable: "--font-public-sans",
+  display: "swap"
+});
+
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair-display",
   display: "swap"
 });
 
@@ -60,7 +66,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${publicSans.variable} font-sans antialiased`}>
+      <body className={`${publicSans.variable} ${playfairDisplay.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>
